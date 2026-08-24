@@ -1,47 +1,32 @@
 import { Injectable } from '@nestjs/common';
 
-export interface Tienda {
-  id: string;
-  nombre: string;
-  direccion: string;
-}
-
 @Injectable()
 export class TiendaClientMock {
-  private tiendas: Map<string, Tienda> = new Map([
-    [
-      '9a2f2e7b-40c4-4c5f-a37c-baf722e18ab9',
-      {
-        id: '9a2f2e7b-40c4-4c5f-a37c-baf722e18ab9',
-        nombre: 'Tienda Central',
-        direccion: 'Calle Principal 123',
-      },
-    ],
-    [
-      '9a2f2e7b-40c4-4c5f-a37c-baf722e18aba',
-      {
-        id: '9a2f2e7b-40c4-4c5f-a37c-baf722e18aba',
-        nombre: 'Tienda Norte',
-        direccion: 'Avenida Norte 456',
-      },
-    ],
-    [
-      '9a2f2e7b-40c4-4c5f-a37c-baf722e18abb',
-      {
-        id: '9a2f2e7b-40c4-4c5f-a37c-baf722e18abb',
-        nombre: 'Tienda Sur',
-        direccion: 'Boulevard Sur 789',
-      },
-    ],
-  ]);
-
-  async findById(id: string): Promise<Tienda | null> {
-    await new Promise((resolve) => setTimeout(resolve, 100)); // Simula latencia
-    return this.tiendas.get(id) || null;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async exists(_tiendaId: string): Promise<boolean> {
+    // Mock implementation - always returns true for testing
+    // In production, this would call the actual Tienda service/API
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    return true;
   }
 
-  async exists(id: string): Promise<boolean> {
-    await new Promise((resolve) => setTimeout(resolve, 100)); // Simula latencia
-    return this.tiendas.has(id);
+  async findById(tiendaId: string): Promise<any> {
+    // Mock implementation
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    return {
+      id: tiendaId,
+      nombreComercial: 'Tienda Mock',
+      rut: '123456789',
+    };
+  }
+
+  async findByIds(tiendaIds: string[]): Promise<any[]> {
+    // Mock implementation for multiple tiendas
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    return tiendaIds.map((id) => ({
+      id,
+      nombreComercial: `Tienda Mock ${id}`,
+      rut: '123456789',
+    }));
   }
 }

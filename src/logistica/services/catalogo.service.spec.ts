@@ -1,6 +1,5 @@
 import { BadRequestException, NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import { TiendaClientMock } from '../clients';
 import {
   CreateCatalogoDto,
   QueryCatalogoDto,
@@ -8,11 +7,15 @@ import {
 } from '../dtos';
 import { CatalogoRepository } from '../repositories';
 import { CatalogoService } from './catalogo.service';
+import { TiendaService } from '../../identificacion/services/tienda.service';
+import { TiendaResponseDto } from '../../identificacion/dtos/tienda/tienda-response.dto';
 
 describe('CatalogoService', () => {
   let service: CatalogoService;
   let repository: jest.Mocked<CatalogoRepository>;
-  let tiendaClient: jest.Mocked<TiendaClientMock>;
+  let tiendaService: {
+    findById: jest.Mock<Promise<TiendaResponseDto | null>, [string]>;
+  };
 
   beforeEach(async () => {
     const mockRepository = {
@@ -22,8 +25,8 @@ describe('CatalogoService', () => {
       update: jest.fn(),
       delete: jest.fn(),
     };
-    const mockTiendaClient = {
-      exists: jest.fn(),
+    const mockTiendaService = {
+      findById: jest.fn<Promise<TiendaResponseDto | null>, [string]>(),
     };
 
     const module: TestingModule = await Test.createTestingModule({
@@ -34,15 +37,15 @@ describe('CatalogoService', () => {
           useValue: mockRepository,
         },
         {
-          provide: TiendaClientMock,
-          useValue: mockTiendaClient,
+          provide: TiendaService,
+          useValue: mockTiendaService,
         },
       ],
     }).compile();
 
     service = module.get<CatalogoService>(CatalogoService);
     repository = module.get(CatalogoRepository);
-    tiendaClient = module.get(TiendaClientMock);
+    tiendaService = module.get(TiendaService);
   });
 
   it('should be defined', () => {
@@ -64,12 +67,14 @@ describe('CatalogoService', () => {
         updatedAt: new Date(),
       };
 
-      tiendaClient.exists.mockResolvedValue(true);
+      tiendaService.findById.mockResolvedValue({
+        id: dto.tiendaId,
+      } as any);
       repository.create.mockResolvedValue(entity as any);
 
       const result = await service.create(dto);
 
-      expect(tiendaClient.exists).toHaveBeenCalledWith(dto.tiendaId);
+      expect(tiendaService.findById).toHaveBeenCalledWith(dto.tiendaId);
       expect(repository.create).toHaveBeenCalledWith(dto);
       expect(result.id).toBe('catalogo-1');
     });
@@ -82,7 +87,7 @@ describe('CatalogoService', () => {
         zona: 'Zona A',
       };
 
-      tiendaClient.exists.mockResolvedValue(false);
+      tiendaService.findById.mockResolvedValue(null);
 
       await expect(service.create(dto)).rejects.toThrow(BadRequestException);
       expect(repository.create).not.toHaveBeenCalled();

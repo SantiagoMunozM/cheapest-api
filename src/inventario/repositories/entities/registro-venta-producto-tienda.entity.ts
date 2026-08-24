@@ -3,9 +3,9 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
-  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
+  ManyToOne,
 } from 'typeorm';
 import { ItemInventario } from './item-inventario.entity';
 

@@ -2,7 +2,6 @@ import {
   Column,
   Entity,
   Index,
-  JoinColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -23,6 +22,5 @@ export class PromocionTienda {
   @ManyToOne(() => Promocion, (promocion) => promocion.tiendas, {
     onDelete: 'CASCADE',
   })
-  @JoinColumn({ name: 'promocionId' })
   promocion: Promocion;
 }
