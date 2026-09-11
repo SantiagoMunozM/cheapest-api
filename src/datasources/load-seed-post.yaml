@@ -1,0 +1,46 @@
+load:
+  # =============================================================
+  # ESCENARIO: POST /logistics/pedidos (ASR2)
+  #
+  # Objetivo de este variant: estresar la escritura transaccional de
+  # pedidos bajo pico (evento de promociones), con el pool de conexiones
+  # de pg sin configurar (default 10) como sospechoso principal.
+  # Sugerencia del enunciado: concentrar demanda (promociones vigentes,
+  # tienda/zona "cabeza") en vez de repartirla uniforme.
+  #
+  # Ajuste estos valores con su propio diseño, justificado en el
+  # entregable (ver lab_2_warmup.md y el entregable 1). NO deje esto
+  # como placeholder uniforme.
+  # =============================================================
+
+  # --- Dimensiones del negocio ---
+  tiendas: 50          # placeholder — ¿cuántas tiendas modela su ciudad?
+  zonas: 10            # placeholder — ¿cuántas zonas y cuál es la "cabeza"?
+
+  # Distribución de la actividad sobre tiendas/zonas/productos.
+  # Sin esta llave el seeder reparte todo de forma uniforme (round-robin).
+  distribucion:
+    tipo: pareto
+    peso_cabeza: 0.6       # fracción de la actividad que cae en la cabeza
+    fraccion_cabeza: 0.4   # tamaño de la cabeza respecto del pool
+
+  # --- Logística --- (placeholders — ajuste cada conteo y su razón)
+  productos: 300
+  catalogos: 10
+  catalogos_productos: 200
+  promociones: 20
+  pedidos: 200
+  items_pedido: 400
+  despachos: 100
+  disponibilidad_zona: 200
+  notas_credito: 20
+
+  # --- Inventario ---
+  items_inventario: 100
+  registros_compra_producto_tienda: 100
+  registros_venta_producto_tienda: 100
+
+  # --- Ventas ---
+  productos_externos: 30
+  ventas: 100
+  items_venta: 200

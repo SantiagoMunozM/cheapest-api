@@ -18,7 +18,7 @@ load:
   # Distribución de la actividad sobre tiendas/zonas/productos.
   # Sin esta llave el seeder reparte todo de forma uniforme (round-robin).
   # Descoméntela y ajústela para modelar la concentración real:
-  # distribucion:
+  distribucion:
   #   tipo: pareto
   #   peso_cabeza: 0.8       # fracción de la actividad que cae en la cabeza
   #   fraccion_cabeza: 0.2   # tamaño de la cabeza respecto del pool

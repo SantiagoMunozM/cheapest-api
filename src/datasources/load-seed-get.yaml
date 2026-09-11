@@ -1,0 +1,46 @@
+load:
+  # =============================================================
+  # ESCENARIO: GET /logistics/tenderos/productos-disponibles (ASR1)
+  #
+  # Objetivo de este variant: estresar la consulta de disponibilidad.
+  # Sugerencia del enunciado: inflar el histórico de pedidos/items_pedido
+  # para una tienda/zona concentradas (cabeza de Pareto), ya que esa
+  # consulta hace EXISTS correlacionados contra pedidos/items_pedido/
+  # catalogos/disponibilidad_zona sin índices.
+  #
+  # Ajuste estos valores con su propio diseño, justificado en el
+  # entregable (ver lab_2_warmup.md y el entregable 1). NO deje esto
+  # como placeholder uniforme.
+  # =============================================================
+
+  # --- Dimensiones del negocio ---
+  tiendas: 20          # placeholder — ¿cuántas tiendas modela su ciudad?
+  zonas: 5        # placeholder — ¿cuántas zonas y cuál es la "cabeza"?
+
+  # Distribución de la actividad sobre tiendas/zonas/productos.
+  # Sin esta llave el seeder reparte todo de forma uniforme (round-robin).
+  distribucion:
+    tipo: pareto
+    peso_cabeza: 0.8       # fracción de la actividad que cae en la cabeza
+    fraccion_cabeza: 0.05   # tamaño de la cabeza respecto del pool
+
+  # --- Logística --- (placeholders — ajuste cada conteo y su razón)
+  productos: 300
+  catalogos: 10
+  catalogos_productos: 200
+  promociones: 80
+  pedidos: 800
+  items_pedido: 1600
+  despachos: 100
+  disponibilidad_zona: 600
+  notas_credito: 20
+
+  # --- Inventario ---
+  items_inventario: 100
+  registros_compra_producto_tienda: 100
+  registros_venta_producto_tienda: 100
+
+  # --- Ventas ---
+  productos_externos: 30
+  ventas: 100
+  items_venta: 200

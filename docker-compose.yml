@@ -39,6 +39,7 @@ services:
       DB_PASSWORD: ${DB_PASSWORD:-postgres}
       DB_NAME: ${DB_NAME:-cheapest}
       PORT: 3000
+      LOAD_SEED_FILE: ${LOAD_SEED_FILE:-load-seed.yaml}
     depends_on:
       postgres:
         condition: service_healthy

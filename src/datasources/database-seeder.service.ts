@@ -192,9 +192,12 @@ export class DatabaseSeederService implements OnModuleInit {
   }
 
   private loadSeedCounts(): LoadSeedCounts {
+    const fileName = process.env.LOAD_SEED_FILE ?? 'load-seed.yaml';
+    this.logger.log(`Using load-seed file: ${fileName}`);
+
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     const config = yaml.load(
-      fs.readFileSync(path.join(__dirname, 'load-seed.yaml'), 'utf8'),
+      fs.readFileSync(path.join(__dirname, fileName), 'utf8'),
     ) as LoadSeedConfig;
     const loadConfig = config.load ?? {};
 
