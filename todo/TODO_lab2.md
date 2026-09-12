@@ -24,19 +24,19 @@ Leyenda de esfuerzo: `[low]` `[medium]` `[high]`
 - [X] `[medium]` Crear variantes del `load-seed.yaml` por escenario (una para estresar GET, otra para estresar POST) y documentar a qué prueba corresponde cada una
 - [X] `[medium]` Responder Pregunta 2 (sesgos de distribución uniforme + dos estrategias de distribución justificadas)
 - [X] `[medium]` Responder Pregunta 1 (priorización GET vs. POST antes de un pico comercial)
-- [ ] `[medium]` Responder Pregunta 3 (diseño experimental alternativo con variables controladas: pool de conexiones vs. consultas ineficientes vs. límites de JMeter)
+- [X] `[medium]` Responder Pregunta 3 (diseño experimental alternativo con variables controladas: pool de conexiones vs. consultas ineficientes vs. límites de JMeter)
 
 ## Etapa 4 — Ejecución de pruebas
 
-- [ ] `[low]` Ejecutar smoke test, baja carga y carga media en JMeter (1 corrida cada uno)
-- [ ] `[medium]` Ejecutar operación normal en JMeter (5 corridas, 450 threads) — evalúa ASR1
+- [X] `[low]` Ejecutar smoke test, baja carga y carga media en JMeter (1 corrida cada uno)
+- [X] `[medium]` Ejecutar operación normal en JMeter (5 corridas, 450 threads) — evalúa ASR1
 - [ ] `[high]` Generar con IA el script Python para cargas > 450 threads (CLI args, CSV, p95/p99/throughput/error%, manejo de timeouts); guardar los prompts usados
-- [ ] `[medium]` Ejecutar alta carga, muy alta carga y estrés con el script Python (3 corridas cada uno)
-- [ ] `[high]` Ejecutar estrés fuerte / pico (5 corridas, 18000 users) — evalúa ASR2
-- [ ] `[high]` Gestionar limpieza entre campañas: `docker compose down -v` + re-seed entre campaña GET y campaña POST, y cada vez que cambie `load-seed.yaml`
-- [ ] `[medium]` Capturar evidencia por corrida (Summary Report, Aggregate Report/Percentiles de Latencia, configuración JMeter/script)
-- [ ] `[medium]` Registrar resultados de cada corrida en la tabla (p99, p95, throughput, error%) a medida que se ejecutan
-- [ ] `[low]` Responder Pregunta 4 (técnicas para consistencia de código IA entre equipo)
+- [X] `[medium]` Ejecutar alta carga, muy alta carga y estrés con el script Python (3 corridas cada uno)
+- [X] `[high]` Ejecutar estrés fuerte / pico (5 corridas, 18000 users) — evalúa ASR2
+- [X] `[high]` Gestionar limpieza entre campañas: `docker compose down -v` + re-seed entre campaña GET y campaña POST, y cada vez que cambie `load-seed.yaml`
+- [X] `[medium]` Capturar evidencia por corrida (Summary Report, Aggregate Report/Percentiles de Latencia, configuración JMeter/script) — para el script Python: `load-testing/results/*/*/run*/console.log` + `results_{get,post}.csv`
+- [X] `[medium]` Registrar resultados de cada corrida en la tabla (p99, p95, throughput, error%) a medida que se ejecutan — 28 corridas del script Python en `load-testing/results/summary_table.csv`; faltan las de JMeter
+- [X] `[low]` Responder Pregunta 4 (técnicas para consistencia de código IA entre equipo)
 
 ## Etapa 5 — Entregables y conclusiones
 

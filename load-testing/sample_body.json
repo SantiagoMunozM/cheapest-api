@@ -1,0 +1,209 @@
+{
+  "identificador": "LOAD-0c0609c0-b534-46d3-a3b4-954b4982dbdc",
+  "tiendaId": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+  "fechaHoraCreacion": "2026-09-12T02:08:23.441973+00:00",
+  "montoTotal": 8813.4,
+  "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+  "items": [
+    {
+      "productoId": "77886821-b773-448f-91b1-a93238083214",
+      "cantidad": 7,
+      "precioUnitario": 68.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-0e528194"
+    },
+    {
+      "productoId": "2ba067a8-fde1-46f1-89ac-a7ff788d1c6a",
+      "cantidad": 9,
+      "precioUnitario": 77.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-7cc7ad6e"
+    },
+    {
+      "productoId": "0b94b766-a735-440d-ab1e-6acbfc50e7ba",
+      "cantidad": 5,
+      "precioUnitario": 88.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-1a181027"
+    },
+    {
+      "productoId": "da8252aa-b83c-4010-9077-c6ff0f36ffda",
+      "cantidad": 10,
+      "precioUnitario": 78.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-6836654f"
+    },
+    {
+      "productoId": "249780f3-fe46-4b9c-b772-72ed69da247d",
+      "cantidad": 6,
+      "precioUnitario": 83.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-ae7c1cac"
+    },
+    {
+      "productoId": "2ba067a8-fde1-46f1-89ac-a7ff788d1c6a",
+      "cantidad": 5,
+      "precioUnitario": 77.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-e4d05243"
+    },
+    {
+      "productoId": "488ec620-fd99-45f5-9799-e0a2bf850c56",
+      "cantidad": 1,
+      "precioUnitario": 32.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-3b632424"
+    },
+    {
+      "productoId": "619594d9-cac7-4c52-be1c-f38ba5f99dd4",
+      "cantidad": 10,
+      "precioUnitario": 98.0,
+      "descuento": 4.9,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-2040a0ba"
+    },
+    {
+      "productoId": "c223d864-1380-4f37-9f42-ffecf788a2d6",
+      "cantidad": 3,
+      "precioUnitario": 12.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-d723f715"
+    },
+    {
+      "productoId": "b6ca34b7-93ee-4862-af11-51c5335b6592",
+      "cantidad": 1,
+      "precioUnitario": 75.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-951b7321"
+    },
+    {
+      "productoId": "c246a9d0-e745-4b9c-abc6-caf6e21d1761",
+      "cantidad": 4,
+      "precioUnitario": 88.0,
+      "descuento": 4.4,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-b59f4647"
+    },
+    {
+      "productoId": "e1f1325c-9be2-43df-9238-eb563c14e073",
+      "cantidad": 4,
+      "precioUnitario": 64.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-1d54858e"
+    },
+    {
+      "productoId": "cb9e2e7e-d9fb-4a99-837a-f0cb006d8976",
+      "cantidad": 9,
+      "precioUnitario": 33.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-af2dd441"
+    },
+    {
+      "productoId": "2a093f82-8d3f-492f-bc61-b97840beb25a",
+      "cantidad": 1,
+      "precioUnitario": 91.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-514763a4"
+    },
+    {
+      "productoId": "eba42fad-467c-4850-9590-3318733dc016",
+      "cantidad": 10,
+      "precioUnitario": 69.0,
+      "descuento": 6.9,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-e7fefebd"
+    },
+    {
+      "productoId": "a97877a8-7e37-4299-8ba2-90a84f667732",
+      "cantidad": 1,
+      "precioUnitario": 68.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-f438ec96"
+    },
+    {
+      "productoId": "02fd1ea9-6d75-4502-bd03-3e9890d54c85",
+      "cantidad": 1,
+      "precioUnitario": 85.0,
+      "descuento": 8.5,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-80255550"
+    },
+    {
+      "productoId": "d72f7b77-33d2-4741-9a72-bc807ac633b9",
+      "cantidad": 2,
+      "precioUnitario": 81.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-28d6ff9a"
+    },
+    {
+      "productoId": "8cd1e3db-df82-4b0e-ae94-d1350aa1d6ea",
+      "cantidad": 7,
+      "precioUnitario": 22.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-e5850032"
+    },
+    {
+      "productoId": "00d4d9bc-caa9-4aeb-9874-2b68867f1bc1",
+      "cantidad": 7,
+      "precioUnitario": 87.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-6327ddbb"
+    },
+    {
+      "productoId": "af8bec4b-c9f3-4b10-bcf7-81bf8ea3d833",
+      "cantidad": 6,
+      "precioUnitario": 80.0,
+      "descuento": 8.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-72311716"
+    },
+    {
+      "productoId": "f36c94c2-21b7-43be-a9f3-6ad5ecfd8010",
+      "cantidad": 5,
+      "precioUnitario": 79.0,
+      "descuento": 3.95,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-47a9c49a"
+    },
+    {
+      "productoId": "801a4061-f414-4129-9a54-0780178c37a8",
+      "cantidad": 2,
+      "precioUnitario": 47.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-9b6d7e99"
+    },
+    {
+      "productoId": "78a898ac-088e-44ea-b907-e7b69bad3718",
+      "cantidad": 4,
+      "precioUnitario": 79.0,
+      "descuento": 3.95,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-569bf170"
+    },
+    {
+      "productoId": "5ecff37f-dcde-410d-a0da-c1541fdfd98e",
+      "cantidad": 5,
+      "precioUnitario": 82.0,
+      "descuento": 0.0,
+      "monedaId": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "lote": "LOTE-30dd4700"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+httpx>=0.27
+
+# Optional, only needed for `load_test.py --plots`:
+# matplotlib>=3.8

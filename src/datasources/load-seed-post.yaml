@@ -5,12 +5,7 @@ load:
   # Objetivo de este variant: estresar la escritura transaccional de
   # pedidos bajo pico (evento de promociones), con el pool de conexiones
   # de pg sin configurar (default 10) como sospechoso principal.
-  # Sugerencia del enunciado: concentrar demanda (promociones vigentes,
-  # tienda/zona "cabeza") en vez de repartirla uniforme.
   #
-  # Ajuste estos valores con su propio diseño, justificado en el
-  # entregable (ver lab_2_warmup.md y el entregable 1). NO deje esto
-  # como placeholder uniforme.
   # =============================================================
 
   # --- Dimensiones del negocio ---

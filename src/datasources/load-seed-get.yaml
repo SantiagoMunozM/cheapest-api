@@ -8,9 +8,6 @@ load:
   # consulta hace EXISTS correlacionados contra pedidos/items_pedido/
   # catalogos/disponibilidad_zona sin índices.
   #
-  # Ajuste estos valores con su propio diseño, justificado en el
-  # entregable (ver lab_2_warmup.md y el entregable 1). NO deje esto
-  # como placeholder uniforme.
   # =============================================================
 
   # --- Dimensiones del negocio ---

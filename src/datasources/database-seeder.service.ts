@@ -251,7 +251,7 @@ export class DatabaseSeederService implements OnModuleInit {
       );
     }
 
-    if (distribucion !== undefined) {
+    if (distribucion != null) {
       const tipo = distribucion.tipo ?? 'uniforme';
       if (tipo === 'pareto') {
         const pesoCabeza = this.parseFraction(

@@ -19,9 +19,9 @@ load:
   # Sin esta llave el seeder reparte todo de forma uniforme (round-robin).
   # Descoméntela y ajústela para modelar la concentración real:
   distribucion:
-  #   tipo: pareto
-  #   peso_cabeza: 0.8       # fracción de la actividad que cae en la cabeza
-  #   fraccion_cabeza: 0.2   # tamaño de la cabeza respecto del pool
+    tipo: pareto
+    peso_cabeza: 0.8       # fracción de la actividad que cae en la cabeza
+    fraccion_cabeza: 0.2   # tamaño de la cabeza respecto del pool
   # Para 200 pedidos
   # el 80% de actividad (160 pedidos) van a asignarse a Tienda "cabeza" 
   # el 20% de actividad (40 pedidos) van a asignarse a Tiendas "cola"
